@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pin Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pin-generator half-width">
+            <input id="pinResult" class="form-control" type="text" readonly />
+            <button onclick="pinInput()" class="generate-btn">
+              Generate Pin
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="input-section half-width">
+            <input id="input-digit" class="form-control pinInput" type="text" />
+            <div class="numbers">
+              <div id="calculator" class="calc-body">
+                <div class="calc-button-row">
+                  <div class="button">7</div>
+                  <div class="button">8</div>
+                  <div class="button">9</div>
+                </div>
+                <div class="calc-button-row">
+                  <div class="button">4</div>
+                  <div class="button">5</div>
+                  <div class="button">6</div>
+                </div>
+                <div class="calc-button-row">
+                  <div class="button">1</div>
+                  <div class="button">2</div>
+                  <div class="button">3</div>
+                </div>
+                <div class="calc-button-row">
+                  <div class="button">B</div>
+                  <div class="button">0</div>
+                  <div class="button">C</div>
+                </div>
+                <div>
+                  <button onclick="submit()" type="submit" class="submit-btn">
+                    Submit
+                  </button>
+                  <p id="tryLeft" class="action-left">
+                    <span id="tryNumber">4</span> try left
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="popup" class="popup">
+          <div class="popup-div">
+            <span id="close">x</span>
+            <div class="error-txt">
+              <p id="errorMessage">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Assumenda voluptates provident perferendis dolores esse debitis
+                saepe explicabo praesentium blanditiis. Est voluptatem suscipit
+                perferendis adipisci natus sapiente nostrum nemo, ratione
+                pariatur!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script src="app.js"></script>
+  </body>
+</html>
