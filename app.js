@@ -35,17 +35,14 @@ buttonDiv.addEventListener('click', (e) => {
 });
 
 const submit = () => {
-  if (inputDigit.value === pinResult.value) {
-    if (inputDigit.value == '') {
-      inputDigit.style.borderColor = 'red';
-    } else {
-      inputDigit.style.borderColor = '#858299';
-      popup.style.display = 'block';
-      errorMessage.innerText =
-        '✅ Pin Matched... Secret door is opening for you';
-      inputDigit.value = '';
-      pinResult.value = '';
-    }
+  if (inputDigit.value == '') {
+    inputDigit.style.borderColor = 'red';
+  } else if (inputDigit.value === pinResult.value) {
+    inputDigit.style.borderColor = '#858299';
+    popup.style.display = 'block';
+    errorMessage.innerText = '✅ Pin Matched... Secret door is opening for you';
+    inputDigit.value = '';
+    pinResult.value = '';
   } else {
     inputDigit.style.borderColor = '#858299';
     tryText.style.display = 'block';
